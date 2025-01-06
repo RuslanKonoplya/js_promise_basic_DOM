@@ -16,13 +16,9 @@ promise1.then((message) => {
 });
 
 const promise2 = new Promise((resolve, reject) => {
-  logo.addEventListener('click', () => {
-    setTimeout(() => {
-      const notif = 'Promise was rejected!';
-
-      reject(notif);
-    }, 3000);
-  });
+  setTimeout(() => {
+    reject(new Error('Promise was rejected!'));
+  }, 3000);
 });
 
 promise2
