@@ -15,16 +15,12 @@ promise1.then((message) => {
   addMessage(message);
 });
 
-
-
 const promise2 = new Promise((resolve, reject) => {
   logo.addEventListener('click', () => {
     setTimeout(() => {
       const notif = 'Promise was rejected!';
 
-      if (notif === 'Promise was rejected!') {
-        reject(notif);
-      }
+      reject(notif);
     }, 3000);
   });
 });
@@ -37,8 +33,6 @@ promise2
     addMessage(error, true);
   });
 
-  
-
 function addMessage(text, isError = false) {
   const messageDiv = document.createElement('div');
 
@@ -50,4 +44,3 @@ function addMessage(text, isError = false) {
   }
   document.body.append(messageDiv);
 }
-
